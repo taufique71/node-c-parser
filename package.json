@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/taufique71/node-c-parser",
   "dependencies": {
+    "jison": "^0.4.15",
+    "lex": "^1.7.9"
   },
   "devDependencies": {
     "assert": "^1.3.0",
