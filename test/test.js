@@ -24,4 +24,14 @@ describe('Scanner test', function () {
         assert.equal(streamOfTokens[4]["tokenClass"], "KEYWORD");
         assert.equal(streamOfTokens[4]["lexeme"], "const");
     });
+    it("Identifiers should be detected", function(){
+        var streamOfTokens = parser.tokenize("wow while do foo _foo foo1 1foo _foo1 foo$asd");
+        console.log(streamOfTokens);
+        assert.equal("1", "1");
+    });
+    it("Integers should be detected", function(){
+        var streamOfTokens = parser.tokenize("1232123 1.4343 +121 -121");
+        console.log(streamOfTokens);
+        assert.equal("1", "1");
+    });
 });
