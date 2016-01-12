@@ -3,35 +3,157 @@ var parser = require("../index");
 var fs = require("fs");
 var async = require("async");
 
-describe('helloWorld test', function () {
-    it('should pass', function () {
-        assert.equal("Hello world!!!", parser.helloWorld("Hello world!!!"));
+describe("Scanner test", function () {
+    describe("Integers should be detected", function(){
+        it("Simple integer expression should pass", function(){
+            var streamOfTokens = parser.tokenize("123");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].lexeme, "123");
+            assert.equal(streamOfTokens[0].tokenClass, "INTEGER");
+        });
+        it("Negative integer expression should pass", function(){
+            var streamOfTokens = parser.tokenize("-123");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].lexeme, "-123");
+            assert.equal(streamOfTokens[0].tokenClass, "INTEGER");
+        });
+        it("Positive integer expression should pass", function(){
+            var streamOfTokens = parser.tokenize("+123");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].lexeme, "+123");
+            assert.equal(streamOfTokens[0].tokenClass, "INTEGER");
+        });
     });
-});
+    describe("Floating point numbers should be detected", function(){
+        it("Simple floating expression", function(){
+            var streamOfTokens = parser.tokenize("123.45");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].lexeme, "123.45");
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+        });
+        it("Negative floating expression", function(){
+            var streamOfTokens = parser.tokenize("-123.45");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].lexeme, "-123.45");
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+        });
+        it("Positive floating expression", function(){
+            var streamOfTokens = parser.tokenize("+123.45");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].lexeme, "+123.45");
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+        });
+        it("Floating expression with nothing after decimal point", function(){
+            var streamOfTokens = parser.tokenize("12.");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            assert.equal(streamOfTokens[0].lexeme, "12.");
+        });
+        it("Positive floating expression with nothing after decimal point", function(){
+            var streamOfTokens = parser.tokenize("+12.");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            assert.equal(streamOfTokens[0].lexeme, "+12.");
+        });
+        it("Negative floating expression with nothing after decimal point", function(){
+            var streamOfTokens = parser.tokenize("-12.");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            assert.equal(streamOfTokens[0].lexeme, "-12.");
+        });
+        it("Floating expression with nothing before decimal point", function(){
+            var streamOfTokens = parser.tokenize(".12");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            assert.equal(streamOfTokens[0].lexeme, ".12");
+        });
+        it("Floating expression with exponent but no decimal point", function(){
+            var streamOfTokens = parser.tokenize("5e6");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            assert.equal(streamOfTokens[0].lexeme, "5e6");
+        });
+        it("Floating expression with positive exponent but no decimal point", function(){
+            var streamOfTokens = parser.tokenize("5e+6");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            assert.equal(streamOfTokens[0].lexeme, "5e+6");
+        });
+        it("Floating expression with negative exponent but no decimal point", function(){
+            var streamOfTokens = parser.tokenize("5e-6");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            assert.equal(streamOfTokens[0].lexeme, "5e-6");
+        });
+        it("Floating expression with negative capital case exponent but no decimal point", function(){
+            var streamOfTokens = parser.tokenize("5E-6");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            assert.equal(streamOfTokens[0].lexeme, "5E-6");
+        });
+        it("Floating expression with positive exponent but nothing before decimal point", function(){
+            var streamOfTokens = parser.tokenize(".5e+6");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            assert.equal(streamOfTokens[0].lexeme, ".5e+6");
+        });
+        it("Floating expression with positive exponent but nothing after decimal point", function(){
+            var streamOfTokens = parser.tokenize("5.e+6");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            assert.equal(streamOfTokens[0].lexeme, "5.e+6");
+        });
+        it("Standard floating expression with positive exponent", function(){
+            var streamOfTokens = parser.tokenize("123.45e+6");
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            assert.equal(streamOfTokens[0].lexeme, "123.45e+6");
+        });
+        it("Expression with just a decimal point", function(){
+            var streamOfTokens = parser.tokenize(".");
+            assert.equal(streamOfTokens.length, 0);
+        });
+    });
 
-describe('Scanner test', function () {
-    it('Keywords should be recognized', function () {
-        var streamOfTokens = parser.tokenize("auto\nbreak\ncase\nchar\nconst\ncontinue\ndefault\ndo\ndouble\nelse\nenum\nextern");
-        //console.log(streamOfTokens);
-        assert.equal(streamOfTokens[0]["tokenClass"], "KEYWORD");
-        assert.equal(streamOfTokens[0]["lexeme"], "auto");
-        assert.equal(streamOfTokens[1]["tokenClass"], "KEYWORD");
-        assert.equal(streamOfTokens[1]["lexeme"], "break");
-        assert.equal(streamOfTokens[2]["tokenClass"], "KEYWORD");
-        assert.equal(streamOfTokens[2]["lexeme"], "case");
-        assert.equal(streamOfTokens[3]["tokenClass"], "KEYWORD");
-        assert.equal(streamOfTokens[3]["lexeme"], "char");
-        assert.equal(streamOfTokens[4]["tokenClass"], "KEYWORD");
-        assert.equal(streamOfTokens[4]["lexeme"], "const");
-    });
-    it("Identifiers should be detected", function(){
-        var streamOfTokens = parser.tokenize("wow while do foo _foo foo1 1foo _foo1 foo$asd");
-        console.log(streamOfTokens);
-        assert.equal("1", "1");
-    });
-    it("Integers should be detected", function(){
-        var streamOfTokens = parser.tokenize("1232123 1.4343 +121 -121");
-        console.log(streamOfTokens);
-        assert.equal("1", "1");
+    //describe("Character constants should be detected", function(){
+        //it("Character constant with zero character", function(lexeme){
+            //var streamOfTokens = parser.tokenize("''");
+            //assert.equal(streamOfTokens.length, 0);
+            ////assert.equal(streamOfTokens[0].tokenClass, "FLOATING");
+            ////assert.equal(streamOfTokens[0].lexeme, "123.45e+6");
+        //});
+        //it("Character constant with exactly one character", function(lexeme){
+            //var streamOfTokens = parser.tokenize("'a'");
+            //assert.equal(streamOfTokens.length, 1);
+            //assert.equal(streamOfTokens[0].tokenClass, "CHARACTER");
+            //assert.equal(streamOfTokens[0].lexeme, "'a'");
+        //});
+        //it("Character constant with more than one character", function(lexeme){
+            //var streamOfTokens = parser.tokenize("'abc'");
+            //assert.equal(streamOfTokens.length, 0);
+            ////assert.equal(streamOfTokens[0].tokenClass, "CHARACTER");
+            ////assert.equal(streamOfTokens[0].lexeme, "'a'");
+        //});
+    //});
+    
+    describe("String constants should be detected", function(){
+        it("String constant with zero character", function(lexeme){
+            var streamOfTokens = parser.tokenize('""');
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "STRING");
+            assert.equal(streamOfTokens[0].lexeme, '""');
+        });
+        it("String constant with exactly one character", function(lexeme){
+            var streamOfTokens = parser.tokenize('"a"');
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "STRING");
+            assert.equal(streamOfTokens[0].lexeme, '"a"');
+        });
+        it("String constant with more than one character", function(lexeme){
+            var streamOfTokens = parser.tokenize('"abc"');
+            assert.equal(streamOfTokens.length, 1);
+            assert.equal(streamOfTokens[0].tokenClass, "STRING");
+            assert.equal(streamOfTokens[0].lexeme, '"abc"');
+        });
     });
 });
