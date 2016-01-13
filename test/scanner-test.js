@@ -138,22 +138,25 @@ describe("Scanner test", function () {
     
     describe("String constants should be detected", function(){
         it("String constant with zero character", function(lexeme){
-            var streamOfTokens = scanner.tokenize('""');
+            var streamOfTokens = scanner.tokenize("\"\"");
+            console.log(streamOfTokens[0].lexeme);
             assert.equal(streamOfTokens.length, 1);
             assert.equal(streamOfTokens[0].tokenClass, "STRING");
-            assert.equal(streamOfTokens[0].lexeme, '""');
+            assert.equal(streamOfTokens[0].lexeme, "\"\"");
         });
         it("String constant with exactly one character", function(lexeme){
-            var streamOfTokens = scanner.tokenize('"a"');
+            var streamOfTokens = scanner.tokenize("\"a\"");
+            console.log(streamOfTokens[0].lexeme);
             assert.equal(streamOfTokens.length, 1);
             assert.equal(streamOfTokens[0].tokenClass, "STRING");
-            assert.equal(streamOfTokens[0].lexeme, '"a"');
+            assert.equal(streamOfTokens[0].lexeme, "\"a\"");
         });
         it("String constant with more than one character", function(lexeme){
-            var streamOfTokens = scanner.tokenize('"abc"');
+            var streamOfTokens = scanner.tokenize("\"abc\"");
+            console.log(streamOfTokens[0].lexeme);
             assert.equal(streamOfTokens.length, 1);
             assert.equal(streamOfTokens[0].tokenClass, "STRING");
-            assert.equal(streamOfTokens[0].lexeme, '"abc"');
+            assert.equal(streamOfTokens[0].lexeme, "\"abc\"");
         });
     });
 });
