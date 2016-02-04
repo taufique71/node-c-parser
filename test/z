@@ -1,7 +1,15 @@
 
 
 
+
 int main(){
     printf("Hello World!!!");
+    return 0;
+}
+
+
+
+
+int func(){
     return 0;
 }
