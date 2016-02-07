@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
 #include "a.h"
 #include "b.h"
 #define MAX 100
