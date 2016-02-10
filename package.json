@@ -25,6 +25,7 @@
     "async": "^1.5.1",
     "jison": "^0.4.15",
     "lex": "^1.7.9",
+    "node-c-lexer": "0.0.3",
     "uuid": "^2.0.1"
   },
   "devDependencies": {
