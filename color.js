@@ -19,7 +19,7 @@ assignment_expr
 assignment_operator
 expr
 constant_expr
-declaration
+                    declaration
 declaration_specifier
 init_declaration_list
 init_declarator
@@ -60,4 +60,4 @@ jump_stmt
                     translation_unit
                     traslation_unit_p
                     external_declaration
-function_definition
+                    function_definition
