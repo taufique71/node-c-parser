@@ -20,7 +20,7 @@ assignment_operator
 expr
 constant_expr
                     declaration
-declaration_specifier
+                    declaration_specifiers
 init_declaration_list
 init_declarator
 storage_class_specifier
@@ -35,7 +35,7 @@ struct_declarator
 enum_specifier
 enumerator
 type_qualifier
-declarator
+                    declarator
 direct_declarator
 pointer
 type_qualifier_list
@@ -50,8 +50,8 @@ initializer
 initializer_list
 stmt
 labeled_stmt
-compount_stmt
-declaration_list
+                    compound_stmt
+                    declaration_list
 stmt_list
 expr_stmt
 selection_stmt

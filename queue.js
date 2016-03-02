@@ -1,4 +1,9 @@
+                    translation_unit
                     translation_unit_p
-external_declaration
+                    external_declaration
 function_definition
 declaration
+declaration_specifiers
+declarator
+declaration_list
+compound_stmt
