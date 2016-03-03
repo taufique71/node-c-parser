@@ -1,7 +1,7 @@
                     translation_unit
                     translation_unit_p
                     external_declaration
-function_definition
+                    function_definition
 declaration
 declaration_specifiers
 declarator
