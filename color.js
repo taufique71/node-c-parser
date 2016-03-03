@@ -21,7 +21,7 @@ expr
 constant_expr
                     declaration
                     declaration_specifiers
-init_declaration_list
+                    init_declarator_list
 init_declarator
 storage_class_specifier
 type_specifier

@@ -7,3 +7,4 @@ declaration_specifiers
 declarator
 declaration_list
 compound_stmt
+init_declarator_list
