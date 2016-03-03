@@ -23,8 +23,8 @@ constant_expr
                     declaration_specifiers
                     init_declarator_list
 init_declarator
-storage_class_specifier
-type_specifier
+                    storage_class_specifier
+                    type_specifier
 struct_or_unior_specifier
 struct_or_union
 struct_declaration_list
@@ -34,7 +34,7 @@ struct_declarator_list
 struct_declarator
 enum_specifier
 enumerator
-type_qualifier
+                    type_qualifier
                     declarator
 direct_declarator
 pointer

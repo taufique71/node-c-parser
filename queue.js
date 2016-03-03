@@ -2,9 +2,12 @@
                     translation_unit_p
                     external_declaration
                     function_definition
-declaration
-declaration_specifiers
+					declaration
+                    declaration_specifiers
 declarator
 declaration_list
 compound_stmt
 init_declarator_list
+storage_class_specifier
+type_specifier
+type_qualifier
