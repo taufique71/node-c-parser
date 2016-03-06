@@ -13,4 +13,4 @@ type_specifier
 type_qualifier
 pointer
 direct_declarator
-declaration_list_p
+                    declaration_list_p
