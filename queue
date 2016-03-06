@@ -4,10 +4,13 @@
                     function_definition
 					declaration
                     declaration_specifiers
-declarator
+                    declarator
 declaration_list
 compound_stmt
 init_declarator_list
 storage_class_specifier
 type_specifier
 type_qualifier
+pointer
+direct_declarator
+declaration_list_p

@@ -36,8 +36,8 @@ enum_specifier
 enumerator
                     type_qualifier
                     declarator
-direct_declarator
-pointer
+                    direct_declarator
+                    pointer
 type_qualifier_list
 parameter_type_list
 parameter_list
@@ -52,6 +52,7 @@ stmt
 labeled_stmt
                     compound_stmt
                     declaration_list
+                    declaration_list_p
 stmt_list
 expr_stmt
 selection_stmt
