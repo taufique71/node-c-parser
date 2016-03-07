@@ -39,7 +39,7 @@ enumerator
                     declarator
                     direct_declarator
                     pointer
-type_qualifier_list
+                    type_qualifier_list
 parameter_type_list
 parameter_list
 parameter_declaration
