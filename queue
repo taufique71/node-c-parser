@@ -7,8 +7,8 @@
                     declarator
                     declaration_list
                     compound_stmt
-init_declarator_list
-storage_class_specifier
+                    init_declarator_list
+                    storage_class_specifier
 type_specifier
 type_qualifier
 pointer
