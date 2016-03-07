@@ -17,3 +17,5 @@ direct_declarator
 stmt_list
 init_declarator
                     init_declarator_list_p
+struct_or_union_specifier
+enum_specifier
