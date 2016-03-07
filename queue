@@ -11,7 +11,7 @@
                     storage_class_specifier
                     type_specifier
                     type_qualifier
-pointer
+                    pointer
 direct_declarator
                     declaration_list_p
 stmt_list
