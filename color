@@ -22,7 +22,8 @@ constant_expr
                     declaration
                     declaration_specifiers
                     init_declarator_list
-init_declarator
+                    init_declarator_list_p
+                    init_declarator
                     storage_class_specifier
                     type_specifier
 struct_or_unior_specifier
@@ -53,7 +54,7 @@ labeled_stmt
                     compound_stmt
                     declaration_list
                     declaration_list_p
-stmt_list
+                    stmt_list
 expr_stmt
 selection_stmt
 iteration_stmt
