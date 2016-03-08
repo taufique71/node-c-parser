@@ -50,12 +50,13 @@ abstract_declarator
 direct_abstract_declarator
 initializer
 initializer_list
-stmt
+                    stmt
 labeled_stmt
                     compound_stmt
                     declaration_list
                     declaration_list_p
                     stmt_list
+                    stmt_list_p
 expr_stmt
 selection_stmt
 iteration_stmt
