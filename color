@@ -34,6 +34,7 @@ specifier_qualifier_list
 struct_declarator_list
 struct_declarator
                     enum_specifier
+                    enumerator_list
 enumerator
                     type_qualifier
                     declarator
@@ -41,6 +42,7 @@ enumerator
                     direct_declarator_p
                     pointer
                     type_qualifier_list
+                    type_qualifier_list_p
                     parameter_type_list
 parameter_list
 parameter_declaration
