@@ -19,7 +19,7 @@
                     stmt_list
                     stmt_list_p
                     init_declarator
-struct_or_union_specifier
+                    struct_or_union_specifier
 enum_specifier
 type_qualifier_list
 constant_expr
@@ -27,3 +27,5 @@ parameter_type_list
 identifier_list
 stmt
 initializer
+struct_or_union
+struct_declaration_list
