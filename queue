@@ -24,7 +24,7 @@
                     type_qualifier_list
                     type_qualifier_list_p
                     constant_expr
-parameter_type_list
+                    parameter_type_list
 identifier_list
 stmt
 initializer
@@ -32,3 +32,4 @@ struct_or_union
 struct_declaration_list
 enumerator_list
 conditional_expr
+parameter_list
