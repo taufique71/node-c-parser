@@ -28,7 +28,7 @@
                     identifier_list
                     identifier_list_p
                     stmt
-initializer
+                    initializer
 struct_or_union
 struct_declaration_list
 enumerator_list
@@ -40,3 +40,5 @@ expression_stmt
 selection_stmt
 iteration_stmt
 jump_stmt
+assignment_expr
+initializer_list

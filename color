@@ -15,7 +15,7 @@ inclusive_or_expr
 logical_and_expr
 logical_or_expr
                     conditional_expr
-assignment_expr
+                    assignment_expr
 assignment_operator
 expr
                     constant_expr
@@ -52,7 +52,7 @@ type_name
 abstract_declarator
 direct_abstract_declarator
                     initializer
-initializer_list
+                    initializer_list
                     stmt
                     labeled_stmt
                     compound_stmt
