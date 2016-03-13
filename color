@@ -54,16 +54,16 @@ direct_abstract_declarator
                     initializer
 initializer_list
                     stmt
-labeled_stmt
+                    labeled_stmt
                     compound_stmt
                     declaration_list
                     declaration_list_p
                     stmt_list
                     stmt_list_p
-expr_stmt
-selection_stmt
-iteration_stmt
-jump_stmt
+                    expression_stmt
+                    selection_stmt
+                    iteration_stmt
+                    jump_stmt
                     translation_unit
                     traslation_unit_p
                     external_declaration

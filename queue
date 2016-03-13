@@ -27,10 +27,16 @@
                     parameter_type_list
                     identifier_list
                     identifier_list_p
-stmt
+                    stmt
 initializer
 struct_or_union
 struct_declaration_list
 enumerator_list
 conditional_expr
 parameter_list
+labeled_stmt
+compound_stmt
+expression_stmt
+selection_stmt
+iteration_stmt
+jump_stmt
