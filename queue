@@ -29,7 +29,7 @@
                     identifier_list_p
                     stmt
                     initializer
-struct_or_union
+                    struct_or_union
 struct_declaration_list
 enumerator_list
 conditional_expr
