@@ -31,8 +31,9 @@
                     initializer
                     struct_or_union
                     struct_declaration_list
-        struct_declaration_list_p
-enumerator_list
+                    struct_declaration_list_p
+                    enumerator_list
+                    enumerator_list_p
 conditional_expr
 parameter_list
 labeled_stmt

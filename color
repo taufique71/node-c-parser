@@ -36,6 +36,7 @@ struct_declarator_list
 struct_declarator
                     enum_specifier
                     enumerator_list
+                    enumerator_list_p
 enumerator
                     type_qualifier
                     declarator
