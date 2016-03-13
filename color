@@ -29,6 +29,7 @@ expr
                     struct_or_unior_specifier
                     struct_or_union
                     struct_declaration_list
+                    struct_declaration_list_p
 struct_declaration
 specifier_qualifier_list
 struct_declarator_list

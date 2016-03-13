@@ -30,7 +30,8 @@
                     stmt
                     initializer
                     struct_or_union
-struct_declaration_list
+        struct_declaration_list
+struct_declaration_list_p
 enumerator_list
 conditional_expr
 parameter_list
