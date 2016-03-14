@@ -34,7 +34,7 @@
                     struct_declaration_list_p
                     enumerator_list
                     enumerator_list_p
-conditional_expr
+                    conditional_expr
 parameter_list
 labeled_stmt
 compound_stmt
@@ -44,3 +44,5 @@ iteration_stmt
 jump_stmt
 assignment_expr
 initializer_list
+logical_or_expr
+expr
