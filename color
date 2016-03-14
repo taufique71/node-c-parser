@@ -47,7 +47,8 @@ enumerator
                     type_qualifier_list_p
                     parameter_type_list
                     parameter_list
-parameter_declaration
+                    parameter_list_p
+                    parameter_declaration
                     identifier_list
                     identifier_list_p
 type_name

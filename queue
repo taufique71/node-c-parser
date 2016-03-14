@@ -35,7 +35,8 @@
                     enumerator_list
                     enumerator_list_p
                     conditional_expr
-parameter_list
+                    parameter_list
+parameter_list_p
 labeled_stmt
 compound_stmt
 expression_stmt
@@ -46,3 +47,4 @@ assignment_expr
 initializer_list
 logical_or_expr
 expr
+parameter_declaration
