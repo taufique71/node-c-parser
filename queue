@@ -36,7 +36,7 @@
                     enumerator_list_p
                     conditional_expr
                     parameter_list
-parameter_list_p
+                    parameter_list_p
 labeled_stmt
 compound_stmt
 expression_stmt
