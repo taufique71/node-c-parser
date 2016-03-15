@@ -37,9 +37,9 @@
                     conditional_expr
                     parameter_list
                     parameter_list_p
-labeled_stmt
-compound_stmt
-expression_stmt
+                    labeled_stmt
+                    expression_stmt
+expression_stmt_p
 selection_stmt
 iteration_stmt
 jump_stmt

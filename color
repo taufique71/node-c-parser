@@ -64,6 +64,7 @@ direct_abstract_declarator
                     stmt_list
                     stmt_list_p
                     expression_stmt
+                    expression_stmt_p
                     selection_stmt
                     iteration_stmt
                     jump_stmt
