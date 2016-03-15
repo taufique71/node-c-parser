@@ -39,7 +39,7 @@
                     parameter_list_p
                     labeled_stmt
                     expression_stmt
-expression_stmt_p
+                    expression_stmt_p
 selection_stmt
 iteration_stmt
 jump_stmt
