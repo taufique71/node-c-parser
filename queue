@@ -44,8 +44,10 @@
                     iteration_stmt
                     jump_stmt
                     assignment_expr
-initializer_list
+                    initializer_list
+                    initializer_list_p
 logical_or_expr
 expr
 parameter_declaration
 unary_expr
+assignment_operator
