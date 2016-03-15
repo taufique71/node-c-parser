@@ -46,7 +46,8 @@
                     assignment_expr
                     initializer_list
                     initializer_list_p
-logical_or_expr
+                    logical_or_expr
+                    logical_or_expr_p
 expr
 parameter_declaration
 unary_expr

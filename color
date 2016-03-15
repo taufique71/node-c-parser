@@ -14,6 +14,7 @@ exclusive_or_expr
 inclusive_or_expr
 logical_and_expr
                     logical_or_expr
+                    logical_or_expr_p
                     conditional_expr
                     assignment_expr
                     assignment_operator
