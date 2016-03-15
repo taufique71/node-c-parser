@@ -42,7 +42,7 @@
                     expression_stmt_p
                     selection_stmt
                     iteration_stmt
-jump_stmt
+                    jump_stmt
 assignment_expr
 initializer_list
 logical_or_expr
