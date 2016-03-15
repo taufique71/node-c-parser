@@ -52,3 +52,4 @@ expr
 parameter_declaration
 unary_expr
 assignment_operator
+logical_and_expr
