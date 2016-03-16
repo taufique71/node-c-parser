@@ -11,8 +11,9 @@ relational_expr
 equality_expr
 and_expr
 exclusive_or_expr
-inclusive_or_expr
-logical_and_expr
+                    inclusive_or_expr
+                    logical_and_expr
+                    logical_and_expr_p
                     logical_or_expr
                     logical_or_expr_p
                     conditional_expr
