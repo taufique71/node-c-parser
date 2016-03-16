@@ -50,7 +50,12 @@
                     logical_or_expr_p
                     expr
                     expr_p
-parameter_declaration
-unary_expr
+                    parameter_declaration
+                    unary_expr
 assignment_operator
 logical_and_expr
+abstract_declarator
+postfix_expr
+unary_operator
+cast_expr
+type_name

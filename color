@@ -1,9 +1,9 @@
 primary_expr
-postfix_expr
+                    postfix_expr
 argument_expr_list
                     unary_expr
-unary_operator
-cast_expr
+                    unary_operator
+                    cast_expr
 multiplicative_expr
 additive_expr
 shift_expr
@@ -53,8 +53,8 @@ enumerator
                     parameter_declaration
                     identifier_list
                     identifier_list_p
-type_name
-abstract_declarator
+                    type_name
+                    abstract_declarator
 direct_abstract_declarator
                     initializer
                     initializer_list
