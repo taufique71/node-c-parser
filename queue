@@ -55,9 +55,10 @@
                     assignment_operator
                     logical_and_expr
                     logical_and_expr_p
-abstract_declarator
+                    abstract_declarator
 postfix_expr
 unary_operator
 cast_expr
 type_name
 inclusive_or_expr
+direct_abstract_declarator

@@ -56,7 +56,7 @@ enumerator
                     identifier_list_p
                     type_name
                     abstract_declarator
-direct_abstract_declarator
+                    direct_abstract_declarator
                     initializer
                     initializer_list
                     initializer_list_p
