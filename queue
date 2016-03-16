@@ -52,7 +52,7 @@
                     expr_p
                     parameter_declaration
                     unary_expr
-assignment_operator
+                    assignment_operator
 logical_and_expr
 abstract_declarator
 postfix_expr
