@@ -19,6 +19,7 @@ logical_and_expr
                     assignment_expr
                     assignment_operator
                     expr
+                    expr_p
                     constant_expr
                     declaration
                     declaration_specifiers
