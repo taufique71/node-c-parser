@@ -60,8 +60,9 @@
                     postfix_expr_p
                     unary_operator
                     cast_expr
-type_name
+                    type_name
 inclusive_or_expr
 direct_abstract_declarator
 primary_expr
 argument_expr_list
+specifier_qualifier_list

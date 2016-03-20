@@ -35,7 +35,7 @@ exclusive_or_expr
                     struct_declaration_list
                     struct_declaration_list_p
 struct_declaration
-specifier_qualifier_list
+                    specifier_qualifier_list
 struct_declarator_list
 struct_declarator
                     enum_specifier
