@@ -11,8 +11,9 @@ additive_expr
 shift_expr
 relational_expr
 equality_expr
-and_expr
+                    and_expr
                     exclusive_or_expr
+                    exclusive_or_expr_p
                     inclusive_or_expr
                     inclusive_or_expr_p
                     logical_and_expr
@@ -36,14 +37,14 @@ and_expr
                     struct_or_union
                     struct_declaration_list
                     struct_declaration_list_p
-struct_declaration
+                    struct_declaration
                     specifier_qualifier_list
 struct_declarator_list
 struct_declarator
                     enum_specifier
                     enumerator_list
                     enumerator_list_p
-enumerator
+                    enumerator
                     type_qualifier
                     declarator
                     direct_declarator

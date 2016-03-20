@@ -69,4 +69,8 @@
                     argument_expr_list
                     argument_expr_list_p
                     specifier_qualifier_list
-exclusive_or_expr
+                    exclusive_or_expr
+                    exclusive_or_expr_p
+and_expr
+enumerator
+struct_declaration
