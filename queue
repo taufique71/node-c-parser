@@ -68,5 +68,5 @@
                     primary_expr
                     argument_expr_list
                     argument_expr_list_p
-specifier_qualifier_list
+                    specifier_qualifier_list
 exclusive_or_expr
