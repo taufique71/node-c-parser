@@ -61,8 +61,10 @@
                     unary_operator
                     cast_expr
                     type_name
-inclusive_or_expr
+                    inclusive_or_expr
+                    inclusive_or_expr_p
 direct_abstract_declarator
 primary_expr
 argument_expr_list
 specifier_qualifier_list
+exclusive_or_expr
