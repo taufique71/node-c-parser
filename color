@@ -12,6 +12,7 @@ shift_expr
 relational_expr
 equality_expr
                     and_expr
+                    and_expr_p
                     exclusive_or_expr
                     exclusive_or_expr_p
                     inclusive_or_expr

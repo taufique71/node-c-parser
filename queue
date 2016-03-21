@@ -71,6 +71,7 @@
                     specifier_qualifier_list
                     exclusive_or_expr
                     exclusive_or_expr_p
-and_expr
+                    and_expr
+                    and_expr_p
 enumerator
 struct_declaration
