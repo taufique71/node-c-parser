@@ -83,5 +83,5 @@
                     additive_expr_p
                     multiplicative_expr
                     multiplicative_expr_p
-enumerator
+                    enumerator
 struct_declaration
