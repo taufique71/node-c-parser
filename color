@@ -6,7 +6,8 @@
                     unary_expr
                     unary_operator
                     cast_expr
-multiplicative_expr
+                    multiplicative_expr
+                    multiplicative_expr_p
                     additive_expr
                     additive_expr_p
                     shift_expr

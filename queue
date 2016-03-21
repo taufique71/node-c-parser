@@ -79,7 +79,9 @@
                     relational_expr_p
                     shift_expr
                     shift_expr_p
-additive_expr
-additive_expr_p
+                    additive_expr
+                    additive_expr_p
+multiplicative_expr
+multiplicative_expr_p
 enumerator
 struct_declaration
