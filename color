@@ -9,8 +9,10 @@
 multiplicative_expr
 additive_expr
 shift_expr
-relational_expr
-equality_expr
+                    relational_expr
+                    relational_expr_p
+                    equality_expr
+                    equality_expr_p
                     and_expr
                     and_expr_p
                     exclusive_or_expr

@@ -73,5 +73,9 @@
                     exclusive_or_expr_p
                     and_expr
                     and_expr_p
+                    equality_expr
+                    equality_expr_p
+                    relational_expr
+                    relational_expr_p
 enumerator
 struct_declaration
