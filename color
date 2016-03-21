@@ -46,7 +46,8 @@
                     struct_declaration
                     specifier_qualifier_list
                     struct_declarator_list
-struct_declarator
+                    struct_declarator_list_p
+                    struct_declarator
                     enum_specifier
                     enumerator_list
                     enumerator_list_p
