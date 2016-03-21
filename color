@@ -8,7 +8,8 @@
                     cast_expr
 multiplicative_expr
 additive_expr
-shift_expr
+                    shift_expr
+                    shift_expr_p
                     relational_expr
                     relational_expr_p
                     equality_expr
