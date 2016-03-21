@@ -84,4 +84,5 @@
                     multiplicative_expr
                     multiplicative_expr_p
                     enumerator
-struct_declaration
+                    struct_declaration
+struct_declarator_list
