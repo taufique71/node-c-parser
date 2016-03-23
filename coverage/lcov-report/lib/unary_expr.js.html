@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/unary_expr.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">lib/</a> unary_expr.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">15.71% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/70</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">17.46% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>11/63</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* jshint sub:true */
+&nbsp;
+/*
+ * unary_expr -&gt; postfix_expr
+ *             | INC_OP unary_expr
+ *             | DEC_OP unary_expr
+ *             | unary_operator cast_expr
+ *             | SIZEOF unary_expr
+ *             | SIZEOF '(' type_name ')'
+ * */
+&nbsp;
+var _ = require("lodash");
+var EPSILON = require("./commons").EPSILON;
+var TERMINAL = require("./commons").TERMINAL;
+var iterate_over_rules = require("./commons").iterate_over_rules;
+var postfix_expr = require("./postfix_expr").postfix_expr;
+var unary_operator = require("./unary_operator").unary_operator;
+var cast_expr = require("./cast_expr").cast_expr;
+var type_name = require("./type_name").type_name;
+&nbsp;
+var list_of_rules = [
+<span class="fstat-no" title="function not covered" >    function(token_stream, arrow, node){</span>
+<span class="cstat-no" title="statement not covered" >        var child_1 = null;</span>
+<span class="cstat-no" title="statement not covered" >        child_1 = postfix_expr(token_stream, arrow);</span>
+<span class="cstat-no" title="statement not covered" >        if(child_1){</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_1);</span>
+        }
+    },
+<span class="fstat-no" title="function not covered" >    function(token_stream, arrow, node){</span>
+<span class="cstat-no" title="statement not covered" >        var child_1 = null;</span>
+<span class="cstat-no" title="statement not covered" >        var child_2 = null;</span>
+<span class="cstat-no" title="statement not covered" >        child_1 = TERMINAL(token_stream, arrow, "INC_OP");</span>
+<span class="cstat-no" title="statement not covered" >        if(child_1) <span class="cstat-no" title="statement not covered" >child_2 = unary_expr(token_stream, arrow);</span></span>
+<span class="cstat-no" title="statement not covered" >        if(child_2){</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_1);</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_2);</span>
+        }
+    },
+<span class="fstat-no" title="function not covered" >    function(token_stream, arrow, node){</span>
+<span class="cstat-no" title="statement not covered" >        var child_1 = null;</span>
+<span class="cstat-no" title="statement not covered" >        var child_2 = null;</span>
+<span class="cstat-no" title="statement not covered" >        child_1 = TERMINAL(token_stream, arrow, "DEC_OP");</span>
+<span class="cstat-no" title="statement not covered" >        if(child_1) <span class="cstat-no" title="statement not covered" >child_2 = unary_expr(token_stream, arrow);</span></span>
+<span class="cstat-no" title="statement not covered" >        if(child_2){</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_1);</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_2);</span>
+        }
+    },
+<span class="fstat-no" title="function not covered" >    function(token_stream, arrow, node){</span>
+<span class="cstat-no" title="statement not covered" >        var child_1 = null;</span>
+<span class="cstat-no" title="statement not covered" >        var child_2 = null;</span>
+<span class="cstat-no" title="statement not covered" >        child_1 = unary_operator(token_stream, arrow);</span>
+<span class="cstat-no" title="statement not covered" >        if(child_1) <span class="cstat-no" title="statement not covered" >child_2 = cast_expr(token_stream, arrow);</span></span>
+<span class="cstat-no" title="statement not covered" >        if(child_2){</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_1);</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_2);</span>
+        }
+    },
+<span class="fstat-no" title="function not covered" >    function(token_stream, arrow, node){</span>
+<span class="cstat-no" title="statement not covered" >        var child_1 = null;</span>
+<span class="cstat-no" title="statement not covered" >        var child_2 = null;</span>
+<span class="cstat-no" title="statement not covered" >        child_1 = TERMINAL(token_stream, arrow, "SIZEOF");</span>
+<span class="cstat-no" title="statement not covered" >        if(child_1) <span class="cstat-no" title="statement not covered" >child_2 = unary_expr(token_stream, arrow);</span></span>
+<span class="cstat-no" title="statement not covered" >        if(child_2){</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_1);</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_2);</span>
+        }
+    },
+<span class="fstat-no" title="function not covered" >    function(token_stream, arrow, node){</span>
+<span class="cstat-no" title="statement not covered" >        var child_1 = null;</span>
+<span class="cstat-no" title="statement not covered" >        var child_2 = null;</span>
+<span class="cstat-no" title="statement not covered" >        child_1 = TERMINAL(token_stream, arrow, "SIZEOF");</span>
+<span class="cstat-no" title="statement not covered" >        if(child_1) <span class="cstat-no" title="statement not covered" >child_2 = TERMINAL(token_stream, arrow, "(");</span></span>
+<span class="cstat-no" title="statement not covered" >        if(child_2) <span class="cstat-no" title="statement not covered" >child_3 = type_name(token_stream, arrow);</span></span>
+<span class="cstat-no" title="statement not covered" >        if(child_3) <span class="cstat-no" title="statement not covered" >child_4 = TERMINAL(token_stream, arrow, ")");</span></span>
+<span class="cstat-no" title="statement not covered" >        if(child_4){</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_1);</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_2);</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_3);</span>
+<span class="cstat-no" title="statement not covered" >            node["children"].push(child_4);</span>
+        }
+    }
+];
+&nbsp;
+var unary_expr = <span class="fstat-no" title="function not covered" >function(token_stream, arrow){</span>
+<span class="cstat-no" title="statement not covered" >    var new_node = {};</span>
+<span class="cstat-no" title="statement not covered" >    var new_arrow = _.clone(arrow);</span>
+<span class="cstat-no" title="statement not covered" >    new_node["title"] = "unary_expr";</span>
+<span class="cstat-no" title="statement not covered" >    new_node["children"] = [];</span>
+<span class="cstat-no" title="statement not covered" >    iterate_over_rules(token_stream, arrow, list_of_rules, new_node);</span>
+<span class="cstat-no" title="statement not covered" >    if(new_node["children"].length &gt; 0){</span>
+<span class="cstat-no" title="statement not covered" >        arrow["pointer"] = new_arrow["pointer"];</span>
+<span class="cstat-no" title="statement not covered" >        return new_node;</span>
+    }
+    else{
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+};
+module.exports.unary_expr = unary_expr;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Mar 23 2016 16:31:00 GMT+0600 (BDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
