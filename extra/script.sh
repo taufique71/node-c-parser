@@ -65,8 +65,8 @@
 
 ###### Initialize test files for all grammar rules
 rule_list=(
-    #translation_unit
-    #translation_unit_p
+    translation_unit
+    translation_unit_p
     external_declaration
     function_definition
     declaration
@@ -160,5 +160,6 @@ rule_list=(
 for i in ${rule_list[@]}; do
     source_file=$PWD/test/translation_unit.js
     destination_file=$PWD/test/$i.js
+    cp $source_file $destination_file
     sed -i "s/translation_unit/$i/g" "$destination_file"
 done
