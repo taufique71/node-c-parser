@@ -1,12 +1,12 @@
-                    translation_unit
-                    translation_unit_p
-                    external_declaration
-                    function_definition
-					declaration
-                    declaration_specifiers
-                    declarator
-                    declaration_list
-                    declaration_list_p
+                translation_unit
+                translation_unit_p
+                external_declaration
+                function_definition
+                declaration
+                declaration_specifiers
+                declarator
+                declaration_list
+                declaration_list_p
                     compound_stmt
                     init_declarator_list
                     init_declarator_list_p

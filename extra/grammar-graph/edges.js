@@ -1,0 +1,22 @@
+// http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
+var links = [
+  {source: "translation_unit", target: "external_declaration", type: "suit"},
+  {source: "translation_unit", target: "translation_unit_p", type: "suit"},
+  {source: "translation_unit_p", target: "external_declaration", type: "suit"},
+  {source: "external_declaration", target: "function_definition", type: "suit"},
+  {source: "external_declaration", target: "declaration", type: "suit"},
+  {source: "function_definition", target: "declaration_specifiers", type: "suit"},
+  {source: "function_definition", target: "declarator", type: "suit"},
+  {source: "function_definition", target: "declaration_list", type: "suit"},
+  {source: "function_definition", target: "compound_stmt", type: "suit"},
+  {source: "declaration", target: "declaration_specifiers", type: "suit"},
+  {source: "declaration", target: "init_declarator_list", type: "suit"},
+  {source: "declaration_specifiers", target: "storage_class_specifier", type: "suit"},
+  {source: "declaration_specifiers", target: "type_specifier", type: "suit"},
+  {source: "declaration_specifiers", target: "type_qualifier", type: "suit"},
+  {source: "declarator", target: "pointer", type: "suit"},
+  {source: "declarator", target: "direct_declarator", type: "suit"},
+  {source: "declaration_list", target: "declaration", type: "suit"},
+  {source: "declaration_list", target: "declaration_list_p", type: "suit"},
+  {source: "declaration_list_p", target: "declaration", type: "suit"},
+];
