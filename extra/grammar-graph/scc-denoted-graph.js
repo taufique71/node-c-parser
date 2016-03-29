@@ -1,4 +1,4 @@
-function getRandomColor() {
+function get_random_color() {
     var letters = '0123456789ABCDEF'.split('');
     var color = '#';
     for (var i = 0; i < 6; i++ ) {
@@ -15,54 +15,50 @@ links.forEach(function(link) {
       (nodes[link.source] = {
           name: link.source, 
           color: true,
-          topological_number: null
+          scc: null
       });
   link.target = nodes[link.target] || 
       (nodes[link.target] = {
           name: link.target, 
           color: true,
-          topological_number: null
+          scc: null
       });
 });
 
-var count = 0;
+var stack = [];
+
 var dfs = function(node){
     node.color = false;
-    ++count;
     for(var i = 0; i < links.length; i++){
         if((links[i].source.name == node.name) && links[i].target.color){
             dfs(links[i].target);
         }
     }
-    node.topological_number = ++count;
+    stack.push(node);
 };
 
-var dfs_reverse = function(node){
+var dfs_reverse = function(node, scc_id){
     node.color = true;
+    node.scc = scc_id;
+    scc[scc_id].push(node);
     for(var i = 0; i < links.length; i++){
         if((links[i].target.name == node.name) && !links[i].source.color){
-            console.log(node.name, "-->", links[i].source.name);
-            dfs(links[i].source);
+            dfs_reverse(links[i].source, scc_id);
         }
     }
 };
 
 dfs(nodes.translation_unit);
-var topological_sorted_nodes = _.values(nodes);
-topological_sorted_nodes.sort(function(a, b){
-    return (a.topological_number-b.topological_number);
-});
 
-var scc_groups = [];
-for(var i = 0; i < topological_sorted_nodes.length; i++){
-    //console.log(topological_sorted_nodes[i].name);
-    if(!nodes[topological_sorted_nodes[i].name].color){
-        scc_groups.push(topological_sorted_nodes[i].name);
-        dfs_reverse(nodes[topological_sorted_nodes[i].name]);
+var scc = {};
+while(stack.length > 0){
+    var node = stack.pop();
+    if(!node.color){
+        var scc_id = get_random_color();
+        scc[scc_id] = [];
+        dfs_reverse(node, scc_id);
     }
 }
-
-
 
 var width = 1200,
     height = 1200;
@@ -104,6 +100,7 @@ var circle = svg.append("g").selectAll("circle")
     .data(force.nodes())
   .enter().append("circle")
     .attr("r", 6)
+    .style("fill", circle_color)
     .call(force.drag);
 
 var text = svg.append("g").selectAll("text")
@@ -129,4 +126,8 @@ function linkArc(d) {
 
 function transform(d) {
   return "translate(" + d.x + "," + d.y + ")";
+}
+
+function circle_color(d){
+    return d.scc;
 }
