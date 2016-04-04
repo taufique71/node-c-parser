@@ -1,89 +1,90 @@
-                    primary_expr
-                    postfix_expr
-                    postfix_expr_p
-                    argument_expr_list
-                    argument_expr_list_p
-                    unary_expr
-                    unary_operator
-                    cast_expr
-                    multiplicative_expr
-                    multiplicative_expr_p
-                    additive_expr
-                    additive_expr_p
-                    shift_expr
-                    shift_expr_p
-                    relational_expr
-                    relational_expr_p
-                    equality_expr
-                    equality_expr_p
-                    and_expr
-                    and_expr_p
-                    exclusive_or_expr
-                    exclusive_or_expr_p
-                    inclusive_or_expr
-                    inclusive_or_expr_p
-                    logical_and_expr
-                    logical_and_expr_p
-                    logical_or_expr
-                    logical_or_expr_p
-                    conditional_expr
-                    assignment_expr
-                    assignment_operator
-                    expr
-                    expr_p
-                    constant_expr
-                    declaration
-                    declaration_specifiers
-                    init_declarator_list
-                    init_declarator_list_p
-                    init_declarator
-                    storage_class_specifier
-                    type_specifier
-                    struct_or_unior_specifier
-                    struct_or_union
-                    struct_declaration_list
-                    struct_declaration_list_p
-                    struct_declaration
-                    specifier_qualifier_list
-                    struct_declarator_list
-                    struct_declarator_list_p
-                    struct_declarator
-                    enum_specifier
-                    enumerator_list
-                    enumerator_list_p
-                    enumerator
-                    type_qualifier
-                    declarator
-                    direct_declarator
-                    direct_declarator_p
-                    pointer
-                    type_qualifier_list
-                    type_qualifier_list_p
-                    parameter_type_list
-                    parameter_list
-                    parameter_list_p
-                    parameter_declaration
-                    identifier_list
-                    identifier_list_p
-                    type_name
-                    abstract_declarator
-                    direct_abstract_declarator
-                    initializer
-                    initializer_list
-                    initializer_list_p
-                    stmt
-                    labeled_stmt
-                    compound_stmt
-                    declaration_list
-                    declaration_list_p
-                    stmt_list
-                    stmt_list_p
-                    expression_stmt
-                    expression_stmt_p
-                    selection_stmt
-                    iteration_stmt
-                    jump_stmt
-                    translation_unit
-                    traslation_unit_p
-                    external_declaration
-                    function_definition
+primary_expr                    --> /expressions
+postfix_expr                    --> /expressions
+postfix_expr_p                  --> /expressions
+argument_expr_list              --> /expressions
+argument_expr_list_p            --> /expressions
+unary_expr                      --> /expressions
+unary_operator                  --> /operators
+cast_expr                       --> /expressions
+multiplicative_expr             --> /expressions
+multiplicative_expr_p           --> /expressions
+additive_expr                   --> /expressions
+additive_expr_p                 --> /expressions
+shift_expr                      --> /expressions
+shift_expr_p                    --> /expressions
+relational_expr                 --> /expressions
+relational_expr_p               --> /expressions
+equality_expr                   --> /expressions
+equality_expr_p                 --> /expressions
+and_expr                        --> /expressions
+and_expr_p                      --> /expressions
+exclusive_or_expr               --> /expressions
+exclusive_or_expr_p             --> /expressions
+inclusive_or_expr               --> /expressions
+inclusive_or_expr_p             --> /expressions
+logical_and_expr                --> /expressions
+logical_and_expr_p              --> /expressions 
+logical_or_expr                 --> /expressions
+logical_or_expr_p               --> /expressions
+conditional_expr                --> /expressions
+assignment_expr                 --> /expressions
+assignment_operator             --> /operators
+expr                            --> /expressions
+expr_p                          --> /expressions
+constant_expr                   --> /expressions
+declaration                     --> /declarations
+declaration_specifiers          --> /declarations
+init_declarator_list            --> /declarators
+init_declarator_list_p          --> /declarators
+init_declarator                 --> /declarators
+storage_class_specifier         --> /types
+type_specifier                  --> /types
+struct_or_unior_specifier       --> /structs_or_unions
+struct_or_union                 --> /structs_or_unions
+struct_declaration_list         --> /structs_or_unions
+struct_declaration_list_p       --> /structs_or_unions
+struct_declaration              --> /structs_or_unions
+specifier_qualifier_list        --> /types
+struct_declarator_list          --> /structs_or_unions
+struct_declarator_list_p        --> /structs_or_unions
+struct_declarator               --> /structs_or_unions
+enum_specifier                  --> /enumerators
+enumerator_list                 --> /enumerators
+enumerator_list_p               --> /enumerators
+enumerator                      --> /enumerators
+type_qualifier                  --> /types
+declarator                      --> /declarators
+direct_declarator               --> /declarators
+direct_declarator_p             --> /declarators
+pointer                         --> /types
+type_qualifier_list             --> /types
+type_qualifier_list_p           --> /types
+parameter_type_list             --> /parameters
+parameter_list                  --> /parameters
+parameter_list_p                --> /parameters
+parameter_declaration           --> /parameters
+identifier_list                 --> /identifiers
+identifier_list_p               --> /identifiers
+type_name                       --> /types
+abstract_declarator             --> /declarators
+direct_abstract_declarator      --> /declarators
+direct_abstract_declarator_p    --> /declarators
+initializer                     --> /initializers
+initializer_list                --> /initializers
+initializer_list_p              --> /initializers
+stmt                            --> /statements
+labeled_stmt                    --> /statements
+compound_stmt                   --> /statements
+declaration_list                --> /declarations
+declaration_list_p              --> /declarations
+stmt_list                       --> /statements
+stmt_list_p                     --> /statements
+expression_stmt                 --> /statements
+expression_stmt_p               --> /statements
+selection_stmt                  --> /statements
+iteration_stmt                  --> /statements
+jump_stmt                       --> /statements
+translation_unit                --> /translation_unit
+traslation_unit_p               --> /translation_unit
+external_declaration            --> /declarations
+function_definition             --> /function_definition
