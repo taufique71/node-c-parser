@@ -1,7 +1,7 @@
 /*
-*   declaration_list_p -> declaration
-*                       | EPSILON
-* */
+ *   declaration_list_p -> declaration
+ *                       | EPSILON
+ * */
 
 var _ = require("lodash");
 var iterate_over_rules = require("./commons").iterate_over_rules;
