@@ -103,4 +103,20 @@ describe('unary_operator', function() {
         resulting_json = unary_operator(token_stream, arrow);
         expect(resulting_json).to.not.be.null;
     });
+
+    it("Should reject '!=' as unary operator", function(){
+        var unary_operator = require("../lib/rules").unary_operator;
+        var arrow = { "pointer": 0};
+        var token_stream = [{
+            "lexeme": "!=",
+            "row": 5,
+            "col": 3,
+            "tokenClass": "!=",
+            "keyword": false,
+            "parent": null,
+            "child": null
+        }];
+        resulting_json = unary_operator(token_stream, arrow);
+        expect(resulting_json).to.be.null;
+    });
 });
