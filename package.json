@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/taufique71/node-c-parser",
   "dependencies": {
+    "ajv": "^4.0.2",
     "async": "^1.5.1",
     "jison": "^0.4.15",
     "lex": "^1.7.9",

@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+        "token": {
+            "type": "object",
+            "properties": {
+                "lexeme": {"type": "string"},
+                "row": {"type": "integer", "minimum": 0},
+                "col": {"type": "integer", "minimum": 0},
+                "tokenClass": {"type": "string"},
+                "parent": {"type": "null"},
+                "children": {"type": "null"},
+                "keyword": {"type": "boolean"}
+            },
+            "required": ["lexeme", "row", "col", "tokenClass", "parent", "children"]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "title": {"type": "string"},
+        "children": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {"$ref": "#/definitions/token"},
+                    {"$ref": "#"}
+                ]
+            }
+        }
+    }
+}

@@ -1,5 +1,9 @@
 var assert = require('assert');
 var expect = require("chai").expect;
+var Ajv = require("ajv");
+var ajv = new Ajv();
+var schema = require("../lib/parse-tree-schema");
+var validate = ajv.compile(schema);
 
 describe('assignment_operator', function() {
     it('Should be able to require `assignment_operator` as a function', function () {
@@ -23,6 +27,7 @@ describe('assignment_operator', function() {
         ];
         resulting_json = assignment_operator(token_stream, arrow);
         expect(resulting_json).to.not.be.null;
+		assert(validate(resulting_json), true);
         assert(resulting_json.title, "assignment_operator");
         assert(resulting_json.children.length, 1);
     });
