@@ -42,7 +42,7 @@ describe('relational_expr', function() {
         expect(resulting_json.children.length).to.equal(2);
     });
 
-    it("Shouldn't recognize '(1 < 2)' as relational expression", function(){
+    it("Should recognize '(1 < 2)' as relational expression", function(){
         var relational_expr = require("../lib/rules").relational_expr;
         var arrow = { "pointer": 0};
         var token_stream = [ 
@@ -78,7 +78,9 @@ describe('relational_expr', function() {
             children: null } 
         ];
         resulting_json = relational_expr(token_stream, arrow);
-        expect(resulting_json).to.be.null;
+        expect(resulting_json).to.not.be.null;
+        expect(validate(resulting_json)).to.equal(true);
+        expect(resulting_json.title).to.equal("relational_expr");
     });
 
     it("Should recognize 'width < length' as relational expression", function(){
@@ -165,55 +167,4 @@ describe('relational_expr', function() {
         expect(resulting_json.children.length).to.equal(2);
     });
 
-    it("Shouldn recognize first token of 'width * length == width + length' as relational expression", function(){
-        var relational_expr = require("../lib/rules").relational_expr;
-        var arrow = { "pointer": 0};
-        var token_stream = [ 
-          { lexeme: 'width',
-            row: 1,
-            col: 1,
-            tokenClass: 'IDENTIFIER',
-            parent: null,
-            children: null },
-          { lexeme: '*',
-            row: 1,
-            col: 7,
-            tokenClass: '*',
-            parent: null,
-            children: null },
-          { lexeme: 'length',
-            row: 1,
-            col: 9,
-            tokenClass: 'IDENTIFIER',
-            parent: null,
-            children: null },
-          { lexeme: '==',
-            row: 1,
-            col: 16,
-            tokenClass: 'EQ_OP',
-            parent: null,
-            children: null },
-          { lexeme: 'width',
-            row: 1,
-            col: 19,
-            tokenClass: 'IDENTIFIER',
-            parent: null,
-            children: null },
-          { lexeme: '+',
-            row: 1,
-            col: 25,
-            tokenClass: '+',
-            parent: null,
-            children: null },
-          { lexeme: 'length',
-            row: 1,
-            col: 27,
-            tokenClass: 'IDENTIFIER',
-            parent: null,
-            children: null } 
-        ];
-        resulting_json = relational_expr(token_stream, arrow);
-        expect(resulting_json).to.not.be.null;
-        expect(arrow.pointer).to.equal(1);
-    });
 });

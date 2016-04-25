@@ -1,5 +1,9 @@
 var assert = require('assert');
 var expect = require("chai").expect;
+var Ajv = require("ajv");
+var ajv = new Ajv();
+var schema = require("../lib/parse-tree-schema");
+var validate = ajv.compile(schema);
 
 describe('unary_expr', function() {
     it('Should be able to require `unary_expr` as a function', function () {
@@ -28,5 +32,9 @@ describe('unary_expr', function() {
 
         resulting_json = unary_expr(token_stream, arrow);
         expect(resulting_json).to.not.be.null;
+        expect(validate(resulting_json)).to.equal(true);
+        expect(resulting_json.title).to.equal("unary_expr");
+        expect(resulting_json.children.length).to.equal(1);
+        expect(resulting_json.children[0].title).to.equal("postfix_expr");
     });
 });

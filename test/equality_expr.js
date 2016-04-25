@@ -48,43 +48,45 @@ describe('equality_expr', function() {
         expect(resulting_json.children.length).to.equal(2);
     });
 
-    it("Shouldn't recognize '(1 == 2)' as equality expression", function(){
+    it("Should recognize '(1 == 2)' as equality expression", function(){
         var equality_expr = require("../lib/rules").equality_expr;
         var arrow = { "pointer": 0};
         var token_stream = [ 
-		  { lexeme: '(',
-			row: 1,
-			col: 1,
-			tokenClass: '(',
-			parent: null,
-			children: null },
-		  { lexeme: '1',
-			row: 1,
-			col: 2,
-			tokenClass: 'CONSTANT',
-			parent: null,
-			children: null },
-		  { lexeme: '==',
-			row: 1,
-			col: 4,
-			tokenClass: 'EQ_OP',
-			parent: null,
-			children: null },
-		  { lexeme: '2',
-			row: 1,
-			col: 7,
-			tokenClass: 'CONSTANT',
-			parent: null,
-			children: null },
-		  { lexeme: ')',
-			row: 1,
-			col: 8,
-			tokenClass: ')',
-			parent: null,
-			children: null } 
-		];
+          { lexeme: '(',
+            row: 1,
+            col: 1,
+            tokenClass: '(',
+            parent: null,
+            children: null },
+          { lexeme: '1',
+            row: 1,
+            col: 2,
+            tokenClass: 'CONSTANT',
+            parent: null,
+            children: null },
+          { lexeme: '==',
+            row: 1,
+            col: 4,
+            tokenClass: 'EQ_OP',
+            parent: null,
+            children: null },
+          { lexeme: '2',
+            row: 1,
+            col: 7,
+            tokenClass: 'CONSTANT',
+            parent: null,
+            children: null },
+          { lexeme: ')',
+            row: 1,
+            col: 8,
+            tokenClass: ')',
+            parent: null,
+            children: null } 
+        ];
         resulting_json = equality_expr(token_stream, arrow);
-        expect(resulting_json).to.be.null;
+        expect(resulting_json).to.not.be.null;
+        expect(validate(resulting_json)).to.equal(true);
+        expect(resulting_json.title).to.equal("equality_expr");
     });
 
     it("Should recognize '1 != 2' as equality expression", function(){
