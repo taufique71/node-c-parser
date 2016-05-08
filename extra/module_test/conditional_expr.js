@@ -1,12 +1,4 @@
-var parser = require("../../index");
-
-//parser.lexer.cppUnit.clearPreprocessors("./b.c", function(err, codeText){
-    //var tokens = parser.lexer.lexUnit.tokenize(codeText);
-    //var obj = parser.parse(tokens);
-    //console.log(obj);
-//}
-
-
+        var conditional_expr = require("../../lib/rules.js").conditional_expr;
         var arrow = { "pointer": 0};
         var token_stream = [ 
           { lexeme: '(',
