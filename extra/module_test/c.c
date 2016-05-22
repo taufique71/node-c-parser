@@ -1,4 +1,9 @@
+void func(){
+    return;
+}
+
 int main(){
-    int a = ((1<2)?1:2);
+    int a;
+    func();
     return 0;
 }
