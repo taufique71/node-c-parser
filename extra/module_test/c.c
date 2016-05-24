@@ -1,9 +1,6 @@
-void func(){
-    return;
-}
+#include <stdio.h>
 
 int main(){
-    int a;
-    func();
+    printf("Hello World!");
     return 0;
 }
