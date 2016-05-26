@@ -5,7 +5,7 @@ int copycat( int b){
 }
 
 int main(){
-    int c;
+    int c, d;
     c = copycat(0);
     return 0;
 }
