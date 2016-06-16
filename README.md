@@ -12,4 +12,23 @@ C programming language grammars are taken from [here](https://www.lysator.liu.se
 Before implementation left recursion is removed from this grammar set. 
 Final grammar set on which this parser is implemented can be found in [GRAMMARS.md](https://github.com/taufique71/node-c-parser/blob/master/GRAMMARS.md) file of this project.
 
+### Installation
+Can be installed through npm with `npm install node-c-parser`.
+
 ### Usage
+There is only one API endpoint to use for parsing if token stream is ready. 
+Otherwise it is necessary to generate token stream before parsing. 
+To generate token stream, lexical analyzer unit of this module have to be used.
+
+Let following code to be parsed - 
+
+```c
+#include <stdio.h>
+
+int main(){
+    printf("Hello World!");
+    return 0;
+}
+```
+
+1. **Preprocessing**: Before doing anything on source code at first preprocessors are to be removed.
