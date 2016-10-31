@@ -1,4 +1,6 @@
 var assert = require('assert');
+var expect = require("chai").expect;
+var jsonfile = require("jsonfile");
 
 describe('declaration', function() {
     it('Should be able to require `declaration` as a function', function () {
