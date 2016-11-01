@@ -9,6 +9,21 @@ describe('compound_stmt', function() {
         assert(typeof(compound_stmt), "function");
     });
 
+    it("case_2 should be realized as compound statement", function(){
+        var compound_stmt = require("../../lib/rules").compound_stmt;
+        var file = __dirname + "/compound_stmt/cases/case_2.js"
+        jsonfile.readFile(file, function(err, token_strem){
+            if(err) done(err);
+            else{
+                var arrow = { "pointer": 0};
+                resulting_json = compound_stmt(token_stream, arrow);
+                expect(resulting_json).to.not.be.null;
+                expect(validate(resulting_json)).to.equal(true);
+                done();
+            }
+        });
+    });
+
     it("case_1 should be realized as compound statement", function(){
         var compound_stmt = require("../../lib/rules").compound_stmt;
         var file = __dirname + "/compound_stmt/cases/case_1.js"
