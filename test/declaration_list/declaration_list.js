@@ -21,7 +21,21 @@ describe('declaration_list', function() {
             else{
                 var arrow = { "pointer": 0 };
                 resulting_json = declaration_list(token_stream, arrow);
-                console.log(resulting_json);
+                expect(resulting_json).to.not.be.null;
+                expect(validate(resulting_json)).to.equal(true);
+                done();
+            }
+        });
+    });
+
+    it("case_2 should be realized as declaration_list", function(done){
+        var declaration_list = require("../../lib/rules").declaration_list;
+        var file = __dirname + "/cases/case_2.js"
+        jsonfile.readFile(file, function(err, token_stream){
+            if(err) done(err);
+            else{
+                var arrow = { "pointer": 0 };
+                resulting_json = declaration_list(token_stream, arrow);
                 expect(resulting_json).to.not.be.null;
                 expect(validate(resulting_json)).to.equal(true);
                 done();
