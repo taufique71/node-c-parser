@@ -13,9 +13,9 @@ describe('compound_stmt', function() {
         assert(typeof(compound_stmt), "function");
     });
 
-    it("case_2 should be realized as compound statement", function(done){
+    it("case_1 should be realized as compound statement", function(done){
         var compound_stmt = require("../../lib/rules").compound_stmt;
-        var file = __dirname + "/cases/case_2.js"
+        var file = __dirname + "/cases/case_1.js"
         jsonfile.readFile(file, function(err, token_stream){
             if(err) done(err);
             else{
@@ -28,9 +28,9 @@ describe('compound_stmt', function() {
         });
     });
 
-    it("case_1 should be realized as compound statement", function(done){
+    it("case_2 should be realized as compound statement", function(done){
         var compound_stmt = require("../../lib/rules").compound_stmt;
-        var file = __dirname + "/cases/case_1.js"
+        var file = __dirname + "/cases/case_2.js"
         jsonfile.readFile(file, function(err, token_stream){
             if(err) done(err);
             else{

@@ -1,6 +1,10 @@
 var assert = require("assert");
 var expect = require("chai").expect;
 var jsonfile = require("jsonfile");
+var Ajv = require("ajv");
+var ajv = new Ajv();
+var schema = require("../../lib/parse-tree-schema");
+var validate = ajv.compile(schema);
 
 describe('function_definition', function() {
     it('Should be able to require `function_definition` as a function', function () {
