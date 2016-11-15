@@ -28,7 +28,7 @@
     "jsonfile": "^2.4.0",
     "lex": "^1.7.9",
     "lodash": "^4.5.1",
-    "node-c-lexer": "0.0.3",
+    "node-c-lexer": "^1.0.0",
     "uuid": "^2.0.1"
   },
   "devDependencies": {
