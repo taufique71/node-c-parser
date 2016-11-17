@@ -138,6 +138,8 @@
 /*
  *  enum_specifier -> ENUM IDENTIFIER '{' enumerator_list '}'
  *                  | ENUM '{' enumerator_list '}'
+ *                  | ENUM IDENTIFIER '{' enumerator_list ',' '}'
+ *                  | ENUM '{' enumerator_list ',' '}'
  *                  | ENUM IDENTIFIER 
  * */
 
