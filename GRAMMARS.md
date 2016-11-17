@@ -489,6 +489,9 @@
  *                  | DOUBLE
  *                  | SIGNED
  *                  | UNSIGNED
+ *                  | BOOL
+ *                  | COMPLEX
+ *                  | IMAGINARY
  *                  | struct_or_union_specifier
  *                  | enum_specifier
  *          
