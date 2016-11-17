@@ -468,6 +468,7 @@
 /*
  *  type_qualifier -> CONST
  *                  | VOLATILE
+ *                  | RESTRICT
  * */
 
 /*
