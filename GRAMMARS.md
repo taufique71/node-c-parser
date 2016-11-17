@@ -329,6 +329,8 @@
 
 /*
  *  postfix_expr -> primary_expr postfix_expr_p
+ *                | '(' type_name ')' '{' initializer_list '}' postfix_expr_p
+ *                | '(' type_name ')' '{' initializer_list ',' '}' postfix_expr_p
  * */
 
 /*
