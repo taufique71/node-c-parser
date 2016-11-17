@@ -203,6 +203,10 @@
  * */
 
 /*
+ *  function_specifier -> INLINE
+ * */
+
+/*
  *  identifier_list -> IDENTIFIER identifier_list_p
  * */
 
