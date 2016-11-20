@@ -106,6 +106,10 @@
  * */
 
 /*
+ *  designation -> designator_list '='
+ * */
+
+/*
  *  direct_abstract_declarator -> '(' abstract_declarator ')' direct_abstract_declarator_p
  *                              | '[' ']' direct_abstract_declarator_p
  *                              | '[' assignment_expr ']' direct_abstract_declarator_p
