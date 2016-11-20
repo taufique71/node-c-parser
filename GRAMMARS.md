@@ -292,11 +292,13 @@
 * */
 
 /*
- *   iteration_stmt -> WHILE '(' expr ')' stmt
- *                   | DO stmt WHILE '(' expr ')' ';'
- *                   | FOR '(' expression_stmt expression_stmt ')' stmt
- *                   | FOR '(' expression_stmt expression_stmt expr ')' stmt
- * */
+*   iteration_stmt -> WHILE '(' expr ')' stmt
+*                   | DO stmt WHILE '(' expr ')' ';'
+*                   | FOR '(' expression_stmt expression_stmt ')' stmt
+*                   | FOR '(' expression_stmt expression_stmt expr ')' stmt
+*                   | FOR '(' declaration expression_stmt ')' stmt
+*                   | FOR '(' declaration expression_stmt expr ')' stmt
+* */
 
 /*
  * jump_stmt -> GOTO IDENTIFIER ';'
