@@ -55,14 +55,21 @@
  * */
 
 /*
+ * block_item_list -> block_item block_item_list_p
+ * */
+
+/*
+ *   block_item_list_p -> block_item block_item_list_p
+ *                      | EPSILON
+ * */
+
+/*
  *  cast_expr -> '(' type_name ')' cast_expr
  *             | unary_expr
  * */
 
 /*
- *  compound_stmt -> '{' declaration_list stmt_list '}'
- *                 | '{' stmt_list '}'
- *                 | '{' declaration_list '}'
+ *  compound_stmt -> '{' block_item_list '}'
  *                 | '{' '}'
  * */
 
