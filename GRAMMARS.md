@@ -110,6 +110,15 @@
  * */
 
 /*
+ *  designator_list -> designator designator_list_p
+ * */
+
+/*
+ *  designator_list_p -> designator designator_list_p
+ *                     | EPSILON
+ * */
+
+/*
  *  direct_abstract_declarator -> '(' abstract_declarator ')' direct_abstract_declarator_p
  *                              | '[' ']' direct_abstract_declarator_p
  *                              | '[' assignment_expr ']' direct_abstract_declarator_p
