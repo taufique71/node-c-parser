@@ -127,8 +127,14 @@
  * */
 
 /*
- *  direct_declarator_p -> '[' constant_expr ']' direct_declarator_p
- *                       | '[' ']' constant_expr direct_declarator_p
+ *  direct_declarator_p -> '[' type_qualifier_list assignment_expr ']' direct_declarator_p
+ *                       | '[' type_qualifier_list ']' direct_declarator_p
+ *                       | '[' assignment_expr ']' direct_declarator_p
+ *                       | '[' STATIC type_qualifier_list assignment_expr ']' direct_declarator_p
+ *                       | '[' type_qualifier_list STATIC assignment_expr ']' direct_declarator_p
+ *                       | '[' type_qualifier_list '*' ']' direct_declarator_p
+ *                       | '[' '*' ']' direct_declarator_p
+ *                       | '[' ']' direct_declarator_p
  *                       | '(' 'parameter_type_list' ')' direct_declarator_p
  *                       | '(' identifier_list ')' direct_declarator_p
  *                       | '(' ')' direct_declarator_p
