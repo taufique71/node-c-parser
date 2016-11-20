@@ -254,12 +254,14 @@
 
 /*
  * initializer_list -> initializer initializer_list_p
+ *                   | designation initializer initializer_list_p
  * */
 
 /*
- *   initializer_list_p -> ',' initializer initializer_list_p
- *                       | EPSILON
- * */
+*   initializer_list_p -> ',' initializer initializer_list_p
+*                       | ',' designation initializer initializer_list_p
+*                       | EPSILON
+* */
 
 /*
  *   iteration_stmt -> WHILE '(' expr ')' stmt
