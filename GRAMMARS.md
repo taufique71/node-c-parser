@@ -444,11 +444,6 @@
  * */
 
 /*
- *  stmt_list -> stmt stmt_list_p
- *        
- * */
-
-/*
  *  storage_class_specifier -> TYPEDEF
  *                           | EXTERN
  *                           | STATIC
