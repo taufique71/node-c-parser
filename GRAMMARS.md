@@ -235,9 +235,7 @@
 
 /*
  *  function_definition -> declaration_specifiers declarator declaration_list compound_stmt
- *                      |  declaration_specifiers declarator compound_stmt
- *                      |  declarator declaration_list compound_stmt
- *                      |  declarator compound_stmt
+ *                       | declaration_specifiers declarator compound_stmt
  * */
 
 /*
