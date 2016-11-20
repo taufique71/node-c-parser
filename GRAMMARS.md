@@ -55,12 +55,17 @@
  * */
 
 /*
- * block_item_list -> block_item block_item_list_p
+ *  block_item_list -> block_item block_item_list_p
  * */
 
 /*
- *   block_item_list_p -> block_item block_item_list_p
- *                      | EPSILON
+ *  block_item_list_p -> block_item block_item_list_p
+ *                     | EPSILON
+ * */
+
+/*
+ *  block_item -> declaration
+ *              | stmt
  * */
 
 /*
