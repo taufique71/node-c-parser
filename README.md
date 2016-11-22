@@ -8,7 +8,7 @@ The parse tree is actually a javascript object.
 Further analysis on this JSON formatted parse tree can be run if necessary.
 
 
-C programming language grammars are taken from [here](https://www.lysator.liu.se/c/ANSI-C-grammar-y.html). 
+C programming language grammars are taken from [here](https://gist.github.com/taufique71/a8e0950b0ca21a9564675723c7998052). 
 Before implementation left recursion is removed from this grammar set. 
 Final grammar set on which this parser is implemented can be found in [GRAMMARS.md](https://github.com/taufique71/node-c-parser/blob/master/GRAMMARS.md) file of this project.
 
