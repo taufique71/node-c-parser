@@ -57,4 +57,19 @@ describe('translation_unit', function() {
             }
         });
     });
+
+    it("case_4 should be realized as translation_unit", function(done){
+        var translation_unit = require("../../lib/rules").translation_unit;
+        var file = __dirname + "/cases/case_4.js"
+        jsonfile.readFile(file, function(err, token_stream){
+            if(err) done(err);
+            else{
+                var arrow = { "pointer": 0 };
+                resulting_json = translation_unit(token_stream, arrow);
+                expect(resulting_json).to.not.be.null;
+                expect(validate(resulting_json)).to.equal(true);
+                done();
+            }
+        });
+    });
 });

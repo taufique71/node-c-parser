@@ -57,4 +57,18 @@ describe('declaration', function() {
             }
         });
     });
+    it("case_4 should be realized as declaration", function(done){
+        var declaration = require("../../lib/rules").declaration;
+        var file = __dirname + "/cases/case_4.js"
+        jsonfile.readFile(file, function(err, token_stream){
+            if(err) done(err);
+            else{
+                var arrow = { "pointer": 0 };
+                resulting_json = declaration(token_stream, arrow);
+                expect(resulting_json).to.not.be.null;
+                expect(validate(resulting_json)).to.equal(true);
+                done();
+            }
+        });
+    });
 });
