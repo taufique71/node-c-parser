@@ -3,8 +3,8 @@ var fs = require("fs");
 var jsonfile = require("jsonfile");
 jsonfile.spaces = 2;
 
-var code_file           =   __dirname + "/case_4.c";
-var token_stream_file   =   __dirname + "/case_4.js";
+var code_file           =   __dirname + "/case_6.c";
+var token_stream_file   =   __dirname + "/case_6.js";
 
 lexer.cppUnit.clearPreprocessors(code_file, function (err, code_text) {
     if (err) {

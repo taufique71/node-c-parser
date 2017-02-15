@@ -90,6 +90,7 @@
 /*
  *  declaration -> declaration_specifiers init_declarator_list ';'
  *               | declaration_specifiers ';'
+ *               | type_name init_declaration_list;
  * */
 
 /*
