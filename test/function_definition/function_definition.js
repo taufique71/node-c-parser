@@ -61,4 +61,21 @@ describe('function_definition', function() {
             }
         });
     });
+
+    it("case_4 (function with usage of FILE pointer type casting) should be realized as function_definition", function(done){
+        var function_definition = require("../../lib/rules").function_definition;
+        var file = __dirname + "/cases/case_4.js"
+        jsonfile.readFile(file, function(err, token_stream){
+            if(err){
+                done(err);
+            }
+            else{
+                var arrow = { "pointer": 0 };
+                resulting_json = function_definition(token_stream, arrow);
+                expect(resulting_json).to.not.be.null;
+                expect(validate(resulting_json)).to.equal(true);
+                done();
+            }
+        });
+    });
 });

@@ -90,7 +90,7 @@
 /*
  *  declaration -> declaration_specifiers init_declarator_list ';'
  *               | declaration_specifiers ';'
- *               | type_name init_declaration_list ';'
+ *               | type_name init_declarator_list ';'
  * */
 
 /*
@@ -503,6 +503,8 @@
 /*
  *  type_name -> specifier_qualifier_list abstract_declarator
  *             | specifier_qualifier_list
+ *             | IDENTIFIER abstract_declarator
+ *             | IDENTIFIER
  * */
 
 /*
@@ -558,3 +560,4 @@
  *                  | '!'
  * */
 ```
+                expect(validate(resulting_json)).to.equal(true);

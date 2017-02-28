@@ -2,18 +2,18 @@ var assert = require('assert');
 var expect = require("chai").expect;
 var Ajv = require("ajv");
 var ajv = new Ajv();
-var schema = require("../lib/parse-tree-schema");
+var schema = require("../../lib/parse-tree-schema");
 var validate = ajv.compile(schema);
 
 describe('cast_expr', function() {
     it('Should be able to require `cast_expr` as a function', function () {
-        var cast_expr = require("../lib/rules").cast_expr;
+        var cast_expr = require("../../lib/rules").cast_expr;
         assert(cast_expr);
         assert(typeof(cast_expr), "function");
     });
 
     it("Should recognize '(float) (int) 3.1416' as cast expression", function(){
-        var cast_expr = require("../lib/rules").cast_expr;
+        var cast_expr = require("../../lib/rules").cast_expr;
         var arrow = { "pointer": 0};
         var token_stream = [ 
           { lexeme: '(',
@@ -69,7 +69,7 @@ describe('cast_expr', function() {
     });
 
     it("Should recognize '(float) 12' as cast expression", function(){
-        var cast_expr = require("../lib/rules").cast_expr;
+        var cast_expr = require("../../lib/rules").cast_expr;
         var arrow = { "pointer": 0};
         var token_stream = [ 
           { lexeme: '(',
