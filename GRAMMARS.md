@@ -64,8 +64,8 @@
  * */
 
 /*
- *  block_item -> declaration
- *              | stmt
+ *  block_item -> stmt
+ *              | declaration
  * */
 
 /*
