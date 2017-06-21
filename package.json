@@ -1,6 +1,6 @@
 {
   "name": "node-c-parser",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "NodeJS library to parse C code.",
   "main": "index.js",
   "scripts": {
